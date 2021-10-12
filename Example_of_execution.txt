@@ -1,0 +1,13 @@
+On the Matlab command line...
+
+
+>> settings.NumStim=75;
+>> f_ph_Na=0.8,f_ph_CaL=0.8,f_ph_NaCa=0.4
+>> [StateVars,Ti]=TT_endo_Ko_main(settings,f_ph_Na,f_ph_CaL,f_ph_NaCa);
+>> plot(Ti,StateVars(:,10));
+
+
+Explanation:
+>> (1) We set the number of stimulus in 75 and the partial channel block due to acidosis
+>> (2) We execute the simulation, providing as input parameters the 'settings' defined in the previous command lines and letting the rest of the settings be taken by the program of the default values ​​established at the end of the module.
+>> (3) Once the simulation is finished, we graphically represent the state variable number 10 (which corresponds to the membrane potential Vm, according to the list that appears commented on in the header of the TT_endo_Ko_main.m module) as a function of the time given by the output variable Ti.
